@@ -1,0 +1,107 @@
+        body { font-family: sans-serif; padding: 20px; max-width: 1000px; margin: auto; }
+        .section { border: 1px solid #ccc; padding: 20px; margin-bottom: 20px; border-radius: 8px; background: #fdfdfd; }
+        h2 { margin-top: 0; color: #333; border-bottom: 2px solid #ddd; padding-bottom: 5px;}
+        
+        .form-row { display: flex; gap: 10px; align-items: flex-end; }
+        .form-group { flex: 1; }
+        label { display: block; margin-bottom: 5px; font-weight: bold;}
+        input, select { width: 100%; padding: 8px; box-sizing: border-box; }
+        
+        /* Estilos para los checkboxes */
+        .checkbox-group { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-top: 10px; padding: 10px; background: #eee; }
+        .checkbox-item { background: white; padding: 5px; border: 1px solid #ccc; }
+        .checkbox-item input { width: auto; margin-right: 5px; }
+
+        button { padding: 10px 20px; cursor: pointer; color: white; border: none; border-radius: 4px;}
+        .btn-evento { background: #e0a800; }
+        .btn-trabajador { background: #28a745; }
+        .btn-generar { background: #007bff; width: 100%; font-size: 1.5em; margin-top: 20px; padding: 15px;}
+        body { 
+            font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; 
+            background-color: #f0f2f5; display: flex; height: 100vh; overflow: hidden;
+        }
+
+        /* BARRA LATERAL */
+        .sidebar {
+            width: 300px; background-color: #2c3e50; color: white;
+            padding: 15px; display: flex; flex-direction: column;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.2); z-index: 10;
+        }
+        .sidebar-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #34495e;
+        }
+        .sidebar h2 { margin: 0; font-size: 1.1em; }
+        .btn-add-mini {
+            background-color: #27ae60; color: white; border: none;
+            border-radius: 5px; padding: 5px 10px; cursor: pointer; font-size: 0.9em;
+        }
+        .btn-add-mini:hover { background-color: #2ecc71; }
+
+        .banca-container {
+            flex-grow: 1; overflow-y: auto; padding: 5px;
+            border: 2px dashed #7f8c8d; border-radius: 8px; background-color: #34495e;
+        }
+
+        /* PRINCIPAL */
+        .main-content {
+            flex-grow: 1; padding: 20px; overflow-y: auto;
+            display: flex; flex-wrap: wrap; align-content: flex-start;
+            gap: 20px; justify-content: center;
+        }
+
+        .card { 
+            background: white; width: 320px; border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            display: flex; flex-direction: column; height: fit-content;
+        }
+        .card-header { background-color: #fff; padding: 10px; border-bottom: 2px solid #eee; text-align: center; }
+        .card-header h3 { margin: 0; font-size: 1.1em; color: #333; }
+        .fecha { font-size: 0.8em; color: #888; }
+        .evento-lista { min-height: 80px; padding: 10px; list-style: none; margin: 0; }
+
+        /* ITEMS DE TRABAJADOR */
+        .list-item { 
+            background: white; padding: 8px; margin-bottom: 6px;
+            border: 1px solid #ddd; border-radius: 4px; cursor: grab; font-size: 0.9em;
+        }
+        .list-item:hover { border-color: #aaa; }
+        .banca-container .list-item { background-color: #ecf0f1; color: #333; border: none; }
+
+        .rol-badge { font-size: 0.65em; padding: 2px 4px; border-radius: 4px; color: white; font-weight: bold; text-transform: uppercase;}
+        .rol-normal { background-color: #3498db; }
+        .rol-aux_cocina { background-color: #e67e22; }
+        .rol-sup_cocina { background-color: #c0392b; }
+        .rol-sup_evento { background-color: #8e44ad; }
+
+        /* ETIQUETAS Y CONTADORES */
+        .mini-tags { margin-top: 4px; display: flex; flex-wrap: wrap; gap: 3px; }
+        .badge-dispo { background-color: #95a5a6; color: white; font-size: 0.6em; padding: 1px 4px; border-radius: 3px; }
+        
+        .contador-ok { color: #27ae60; font-weight: bold; } 
+        .contador-falta { color: #e67e22; font-weight: bold; } 
+        .contador-over { color: #c0392b; font-weight: bold; } 
+
+        .fab-guardar {
+            position: fixed; bottom: 30px; right: 30px;
+            background-color: #2980b9; color: white; padding: 15px 25px; 
+            border-radius: 30px; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            font-weight: bold; cursor: pointer; z-index: 100;
+        }
+        .btn-volver { margin-top: auto; padding: 10px; text-align: center; color: #ecf0f1; text-decoration: none; background: rgba(255,255,255,0.1); border-radius: 5px; }
+
+        /* MODAL */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5); z-index: 200;
+            display: none; justify-content: center; align-items: center;
+        }
+        .modal-content {
+            background: white; padding: 20px; border-radius: 8px;
+            width: 400px; max-width: 90%; box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .modal-header { display: flex; justify-content: space-between; margin-bottom: 15px; }
+        .modal-header h3 { margin: 0; color: #333; }
+        .close-btn { cursor: pointer; font-weight: bold; font-size: 1.2em; color: #aaa; }
+        .form-control { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px; }
+        .modal-checkboxes { max-height: 150px; overflow-y: auto; border: 1px solid #eee; padding: 5px; background: #fafafa; }
