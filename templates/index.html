@@ -152,24 +152,19 @@
         }
 
         function actualizarHoraManual(inputObj) {
-        // Lógica auxiliar si se requiere
     }
 
-    // --- NUEVA LÓGICA PARA EL CUPO ---
 
         function actualizarConteo() {
-        // 1. Buscamos todos los checkboxes de eventos
         var checkboxes = document.getElementsByName('eventos_disponibles');
         var contados = 0;
 
-        // 2. Contamos cuántos están marcados (checked)
         for(var i=0; i < checkboxes.length; i++) {
             if(checkboxes[i].checked) {
                 contados++;
             }
         }
 
-        // 3. Ponemos ese número en el input de cupo
         document.getElementById('inputCupo').value = contados;
     }
 
@@ -179,14 +174,13 @@
         for(var i=0; i<checkboxes.length; i++) {
             checkboxes[i].checked = estado;
         }
-        // Después de marcar o desmarcar todo, recalculamos el número
         actualizarConteo();
     }
     
-    // Ejecutar al inicio por si el navegador guardó casillas marcadas al recargar
     window.onload = function() {
         actualizarConteo();
     };
     </script>
 </body>
+
 </html>
